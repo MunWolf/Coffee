@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{> header}}
+    <link rel = 'stylesheet' type = 'text/css' href = 'css://touch.css' />
+    <script type='text/javascript' src='js://button_grid.js'></script>
+    <script type='text/javascript' src='js://control.js'></script>
+  </head>
+  <body>
+    <div class='flowgrid' start='main'>
+      <div id='main' class='flowgrid-content' width=3 height=2 cWidth=180 cHeight=60>
+        <input id='expresso_i' type='button' row=0 column=0 flow='expresso' value='Expresso'/>
+        <input id='coffee_i' type='button' row=0 column=1 flow='coffee' value='Coffee'/>
+        <input id='n1_i' type='button' row=0 column=2 value='Wat'/>
+      </div>
+      <div id='expresso' class='flowgrid-content' width=3 height=2 cWidth=180 cHeight=60>
+        <input id='backe_i' type='button' row=0 column=0 flow='main' value='Back'/>
+        <input id='pumpe_i' type='button' row=0 column=1/>
+      </div>
+      <div id='coffee' class='flowgrid-content' width=3 height=2 cWidth=180 cHeight=60>
+        <input id='backc_i' type='button' row=0 column=0 flow='main' value='Back'/>
+        <input id='pumpc_i' type='button' row=0 column=1/>
+      </div>
+    </div>
+  </body>
+</html>
