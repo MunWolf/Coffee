@@ -6,6 +6,9 @@ $(document).ready(() => {
   var gridWidth = grid.width();
   var gridHeight = grid.height();
 
+  var gridWidth = 100;
+  var gridHeight = 100;
+
   contents.each((index, ele) => {
     var element = $(ele);
     ele.switch_content = (name) => {
@@ -32,8 +35,8 @@ $(document).ready(() => {
       var rspan = parseInt(ielement.attr('rspan') || 1);
 
       ielement.css({
-        top: row * cHeight + (row + 1) * marginY,
-        left: column * cWidth + (column + 1) * marginX,
+        top: row * cHeight + (row + 1) * marginY + 'vh',
+        left: column * cWidth + (column + 1) * marginX + 'vw',
         width: ((cWidth + marginX) * cspan - marginX) + 'vw',
         height: ((cHeight + marginY) * rspan - marginY) + 'vh'
       });
