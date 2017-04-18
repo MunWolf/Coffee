@@ -34,8 +34,8 @@ $(document).ready(() => {
       ielement.css({
         top: row * cHeight + (row + 1) * marginY,
         left: column * cWidth + (column + 1) * marginX,
-        width: ((cWidth + marginX) * cspan - marginX) + 'px',
-        height: ((cHeight + marginY) * rspan - marginY) + 'px'
+        width: ((cWidth + marginX) * cspan - marginX) + 'vw',
+        height: ((cHeight + marginY) * rspan - marginY) + 'vh'
       });
 
       var flow = ielement.attr('flow');
