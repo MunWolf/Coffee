@@ -23,16 +23,19 @@ $(document).ready(() => {
     var marginX = (gridWidth - (width * cWidth)) / (width + 1);
     var marginY = (gridHeight - (height * cHeight)) / (height + 1);
 
-    element.children('input').each((iindex, ielement) => {
+    element.children().each((iindex, ielement) => {
       ielement = $(ielement);
       var row = parseInt(ielement.attr('row'));
       var column = parseInt(ielement.attr('column'));
 
+      var cspan = parseInt(ielement.attr('cspan') || 1);
+      var rspan = parseInt(ielement.attr('rspan') || 1);
+
       ielement.css({
         top: row * cHeight + (row + 1) * marginY,
         left: column * cWidth + (column + 1) * marginX,
-        width: cWidth + 'px',
-        height: cHeight + 'px'
+        width: ((cWidth + marginX) * cspan - marginX) + 'px',
+        height: ((cHeight + marginY) * rspan - marginY) + 'px'
       });
 
       var flow = ielement.attr('flow');

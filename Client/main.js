@@ -10,7 +10,8 @@ app.commandLine.appendSwitch('touch-events', 'enabled');
 let win
 function createWindow () {
   win = new BrowserWindow({width: 800, height: 600, frame: false, fullscreen: true});
-  //win.webContents.openDevTools();
+  win.webContents.openDevTools();
+  
   win.loadURL('data: text/html, ' + encodeURIComponent(pages.render('home', {
     AppName: 'Remote Coffee',
     Directory: __dirname,
@@ -20,23 +21,6 @@ function createWindow () {
   win.on('closed', () => {
     win = null;
   });
-
-  // We can probably just use 'emulated' mouse events.
-  /*win.on('touchstart', () => {
-
-  };
-
-  win.on('touchmove', () => {
-
-  };
-
-  win.on('touchcancel', () => {
-
-  };
-
-  win.on('touchend', () => {
-
-  };*/
 }
 
 app.on('ready', function() {
@@ -49,9 +33,3 @@ app.on('window-all-closed', () => {
     app.quit()
   }
 })
-
-/*app.on('activate', () => {
-  if (win === null) {
-    createWindow()
-  }
-})*/

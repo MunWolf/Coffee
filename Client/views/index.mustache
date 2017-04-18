@@ -8,18 +8,123 @@
   </head>
   <body>
     <div class='flowgrid' start='main'>
-      <div id='main' class='flowgrid-content' width=3 height=2 cWidth=180 cHeight=60>
-        <input id='expresso_i' type='button' row=0 column=0 flow='expresso' value='Expresso'/>
-        <input id='coffee_i' type='button' row=0 column=1 flow='coffee' value='Coffee'/>
-        <input id='n1_i' type='button' row=0 column=2 value='Wat'/>
+      <div id='main' class='flowgrid-content' width=3 height=2 cWidth=300 cHeight=180>
+        <a id='te_i' class='element-on flowgrid-cell flowgrid-input' row=0 column=0 flow='te'>
+          <div class='input-image expresso'>
+          </div>
+          <span class='input-text'>
+            Tea
+          </span>
+        </a>
+
+        <a id='expresso_i' class='element-on flowgrid-cell flowgrid-input' row=0 column=1 flow='expresso'>
+          <div class='input-image expresso'>
+          </div>
+          <span class='input-text'>
+            Expresso
+          </span>
+        </a>
+
+        <a id='milk_i' class='element-on steam-on flowgrid-cell flowgrid-input' row=0 column=2 flow='milk'>
+          <div class='input-image expresso'>
+          </div>
+          <span class='input-text'>
+            Steam
+          </span>
+        </a>
+
+        <a id='coffee_i' class='filter-on flowgrid-cell flowgrid-input' row=1 column=0 cspan=3 flow='brew'>
+          <div class='input-image expresso'>
+          </div>
+          <span class='input-text'>
+            Brew: 4 Cups
+          </span>
+        </a>
       </div>
-      <div id='expresso' class='flowgrid-content' width=3 height=2 cWidth=180 cHeight=60>
-        <input id='backe_i' type='button' row=0 column=0 flow='main' value='Back'/>
-        <input id='pumpe_i' type='button' row=0 column=1/>
+
+      <div id='te' class='flowgrid-content' width=2 height=3 cWidth=450 cHeight=180>
+        <span class='flowgrid-cell info-text' row=0 column=0 cspan=2>Open the valve once the light is green and push Tea,</span>
+
+        <a class='all-off flowgrid-cell flowgrid-input' row=1 column=0 flow='main'>
+          <div class='input-image expresso'>
+          </div>
+          <span class='input-text'>
+            Back
+          </span>
+        </a>
+
+        <a class='pump-on flowgrid-cell flowgrid-input' row=1 column=1 flow='stop'>
+          <div class='input-image expresso'>
+          </div>
+          <span class='input-text'>
+            Tea
+          </span>
+        </a>
+
+        <span class='flowgrid-cell info-text' row=2 column=0 cspan=2>or push Back if you want to stop.</span>
       </div>
-      <div id='coffee' class='flowgrid-content' width=3 height=2 cWidth=180 cHeight=60>
-        <input id='backc_i' type='button' row=0 column=0 flow='main' value='Back'/>
-        <input id='pumpc_i' type='button' row=0 column=1/>
+
+      <div id='expresso' class='flowgrid-content' width=2 height=3 cWidth=450 cHeight=180>
+        <span class='flowgrid-cell info-text' row=0 column=0 cspan=2>Push Expresso once the light is green,</span>
+
+        <a class='all-off flowgrid-cell flowgrid-input' row=1 column=0 flow='main'>
+          <div class='input-image expresso'>
+          </div>
+          <span class='input-text'>
+            Back
+          </span>
+        </a>
+
+        <a class='pump-on flowgrid-cell flowgrid-input' row=1 column=1 flow='stop'>
+          <div class='input-image expresso'>
+          </div>
+          <span class='input-text'>
+            Expresso
+          </span>
+        </a>
+
+        <span class='flowgrid-cell info-text' row=2 column=0 cspan=2>or Back if you want to stop.</span>
+      </div>
+
+      <div id='milk' class='flowgrid-content' width=2 height=3 cWidth=450 cHeight=180>
+        <span class='flowgrid-cell info-text' row=0 column=0 cspan=2>Open the valve once the light is green,</span>
+
+        <a class='all-off flowgrid-cell flowgrid-input' row=1 column=0 flow='main'>
+          <div class='input-image expresso'>
+          </div>
+          <span class='input-text'>
+            Back
+          </span>
+        </a>
+
+        <span class='flowgrid-cell info-text' row=2 column=0 cspan=2>and push Back once you are done.</span>
+      </div>
+
+      <div id='brew' class='flowgrid-content' width=3 height=3 cWidth=300 cHeight=180>
+        <span class='flowgrid-cell info-text' row=0 column=0 cspan=3 rspan=2>Don't hesitate to get yourself some chocolate with this wonderful coffee, enjoy!</span>
+
+        <a class='all-off flowgrid-cell flowgrid-input' row=2 column=0 flow='main'>
+          <div class='input-image expresso'>
+          </div>
+          <span class='input-text'>
+            Stop
+          </span>
+        </a>
+
+        <span class='flowgrid-cell info-text' row=2 column=1 cspan=2>Time until done:</span>
+        <span class='timer flowgrid-cell info-text' row=2 column=2></span>
+      </div>
+
+      <div id='stop' class='flowgrid-content' width=2 height=3 cWidth=450 cHeight=180>
+        <span class='flowgrid-cell super-info-text' row=0 column=0 cspan=2>Hit stop once you are done, remember to close the valve.</span>
+
+        <a class='all-off flowgrid-cell flowgrid-input' row=1 column=0 cspan=2 rspan=2 flow='main'>
+          <div class='input-image expresso'>
+          </div>
+          <span class='input-text'>
+            Stop
+          </span>
+        </a>
       </div>
     </div>
   </body>

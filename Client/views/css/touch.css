@@ -1,5 +1,12 @@
 html {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
+}
+
+body {
+  width: 100%;
+  height: 100%;
 }
 
 .flowgrid {
@@ -18,12 +25,53 @@ html {
   left: 0px;
 }
 
-.flowgrid-content input {
+.flowgrid-cell {
   position: absolute;
   padding:5px 15px;
-  background:#ccc;
   border:0 none;
+}
+
+.flowgrid-input {
+  background:#ccc;
   cursor:pointer;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+}
+
+.input-image {
+  display: block;
+  width: 100%;
+  height: 70%;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-origin: content-box !important;
+  padding-top: 1vh;
+}
+
+.input-text {
+  display: block;
+  width: 100%;
+  height: 18%;
+  padding-top: 2vh;
+  text-align: center;
+}
+
+.expresso {
+  background-image: url('img://expresso.png');
+}
+
+.super-info-text {
+  font-size: 5em;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 180px;
+}
+
+.info-text {
+  font-size: 3em;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 180px;
 }

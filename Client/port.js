@@ -2,7 +2,23 @@
 
 var exports = module.exports = {};
 
-const SerialPort = require('serialport');
+var open_port;
+
+const serial = require('serialport-js');
+serial.find((ports) => {
+  console.log(ports);
+  if(ports.length != 0) {
+    serial.open(ports[0].port, (port) => {
+      open_port = port;
+    },'\n');
+  }
+});
+
+exports.send = (data) => {
+  open_port.send(data);
+}
+
+/*const SerialPort = require('serialport');
 var port = undefined;
 
 SerialPort.list((err, ports) => {
@@ -23,3 +39,4 @@ exports.send = (data) => {
   port.write(data);
   return true;
 };
+*/

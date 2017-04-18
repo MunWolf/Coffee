@@ -1,22 +1,46 @@
 'use strict';
 
 let directory = $('#directory').text();
-//const port = require(directory + '/port.js');
+const port = require(directory + '/port.js');
 
 $(document).ready(() => {
-  $('#expresso_i').click(() => {
-    console.log('Test');
+  $('.element-on').click(() => {
+    port.send('eo');
   });
 
-  $('#coffee_i').click(() => {
-
+  $('.element-off').click(() => {
+    port.send('en');
   });
 
-  $('#backe_i').click(() => {
-
+  $('.steam-on').click(() => {
+    port.send('so');
   });
 
-  $('#backc_i').click(() => {
-
+  $('.steam-off').click(() => {
+    port.send('sn');
   });
+
+  $('.pump-on').click(() => {
+    port.send('so');
+  });
+
+  $('.pump-off').click(() => {
+    port.send('sn');
+  });
+
+  $('.filter-on').click(() => {
+    port.send('so');
+  });
+
+  $('.filter-off').click(() => {
+    port.send('sn');
+  });
+
+  $('.all-off').click(() => {
+    port.send('ii');
+  });
+
+  var t = () => {
+    $('#coffee').get(0).switch_content('main');
+  }
 });

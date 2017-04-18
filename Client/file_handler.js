@@ -18,4 +18,12 @@ exports.initialize = (protocol) => {
   }, (error) => {
     if (error) console.error('Failed to register protocol')
   });
+
+  protocol.registerFileProtocol('img', (request, callback) => {
+    const url = request.url.substr(5);
+    console.log(url);
+    callback({path: path.join(__dirname, '/res/img/' + url)});
+  }, (error) => {
+    if (error) console.error('Failed to register protocol')
+  });
 };
