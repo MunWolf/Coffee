@@ -8,32 +8,16 @@ $(document).ready(() => {
     port.send('eo');
   });
 
-  $('.element-off').click(() => {
-    port.send('en');
-  });
-
   $('.steam-on').click(() => {
     port.send('so');
   });
 
-  $('.steam-off').click(() => {
-    port.send('sn');
-  });
-
   $('.pump-on').click(() => {
-    port.send('so');
-  });
-
-  $('.pump-off').click(() => {
-    port.send('sn');
+    port.send('po');
   });
 
   $('.filter-on').click(() => {
-    port.send('so');
-  });
-
-  $('.filter-off').click(() => {
-    port.send('sn');
+    port.send('fo');
   });
 
   $('.all-off').click(() => {
