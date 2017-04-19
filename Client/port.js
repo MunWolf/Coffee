@@ -24,7 +24,9 @@ var ready = false;
 
 SerialPort.list((err, ports) => {
   console.log(ports);
-  port = new SerialPort(ports[0].comName, {}, (error) => {
+  port = new SerialPort(ports[0].comName, {
+    baudRate: 9600
+  }, (error) => {
     if (error) {
       console.log(error);
       alert(error);
