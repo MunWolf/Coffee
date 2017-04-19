@@ -1,1 +1,1 @@
-./node_modules/.bin/electron .
+npm run start

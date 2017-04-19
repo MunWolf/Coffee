@@ -2,7 +2,7 @@
 
 var exports = module.exports = {};
 
-var open_port;
+/*var open_port;
 
 const serial = require('serialport-js');
 serial.find((ports) => {
@@ -16,18 +16,24 @@ serial.find((ports) => {
 
 exports.send = (data) => {
   open_port.send(data);
-}
+}*/
 
-/*const SerialPort = require('serialport');
+const SerialPort = require('serialport');
 var port = undefined;
+var ready = false;
 
 SerialPort.list((err, ports) => {
-  port = new SerialPort(ports[0].comName);
-});
+  console.log(ports);
+  port = new SerialPort(ports[0].comName, {}, (error) => {
+    if (error) {
+      console.log(error);
+      alert(error);
+      return;
+    }
 
-var ready = false;
-var queue = [];
-port.open(() => { ready = true; });
+    ready = true;
+  });
+});
 
 exports.isOpen = () => { return ready; };
 
@@ -39,4 +45,3 @@ exports.send = (data) => {
   port.write(data);
   return true;
 };
-*/

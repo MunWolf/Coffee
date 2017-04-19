@@ -4,6 +4,9 @@
   "description": "",
   "main": "main.js",
   "scripts": {
+    "start": "electron .",
+    "install": "electron-rebuild",
+    "rebuild": "electron-rebuild -f -w serialport",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -15,8 +18,11 @@
   "license": "UNLICENSED",
   "dependencies": {
     "async": "^2.2.0",
-    "electron": "^1.6.2",
     "mustache": "^2.3.0",
     "serialport": "^4.0.7"
+  },
+  "devDependencies": {
+    "electron": "^1.6.5",
+    "electron-rebuild": "^1.5.7"
   }
 }
