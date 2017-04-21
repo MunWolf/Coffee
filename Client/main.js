@@ -14,7 +14,7 @@ function createWindow () {
   win = new BrowserWindow({width: 800, height: 600, frame: false, fullscreen: true});
   //win.webContents.openDevTools();
   var language;
-  if (true) {
+  if (false) {
     language = {
       tea: 'Tea',
       espresso: 'Espresso',
@@ -56,7 +56,7 @@ function createWindow () {
     };
   }
 
-  win.loadURL('data: text/html, ' + encodeURIComponent(pages.render('home', {
+  win.loadURL('data: text/html;charset=utf-8, ' + encodeURIComponent(pages.render('home', {
     AppName: 'Remote Coffee',
     Directory: __dirname,
     Page: 'Home',
