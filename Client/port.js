@@ -29,7 +29,6 @@ SerialPort.list((err, ports) => {
   }, (error) => {
     if (error) {
       console.log(error);
-      alert(error);
       return;
     }
 

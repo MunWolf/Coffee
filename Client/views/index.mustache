@@ -3,8 +3,8 @@
   <head>
     {{> header}}
     <link rel = 'stylesheet' type = 'text/css' href = 'css://touch.css' />
-    <script type='text/javascript' src='js://button_grid.js'></script>
-    <script type='text/javascript' src='js://control.js'></script>
+    <script type='text/javascript' src='js://button_grid.js' charset='utf-8'></script>
+    <script type='text/javascript' src='js://control.js' charset='utf-8'></script>
   </head>
   <body>
     <div class='flowgrid' start='main'>
@@ -13,7 +13,7 @@
           <div class='input-image tea'>
           </div>
           <span class='input-text'>
-            Tea
+            {{Language.tea}}
           </span>
         </a>
 
@@ -21,7 +21,7 @@
           <div class='input-image espresso'>
           </div>
           <span class='input-text'>
-            Espresso
+            {{Language.espresso}}
           </span>
         </a>
 
@@ -29,27 +29,27 @@
           <div class='input-image steam'>
           </div>
           <span class='input-text'>
-            Steam
+            {{Language.steam}}
           </span>
         </a>
 
-        <a id='coffee_i' class='create-brew filter-on flowgrid-cell flowgrid-input' row=1 column=0 cspan=3 flow='brew'>
+        <a id='coffee_i' class='create-brew timer-on filter-on flowgrid-cell flowgrid-input' row=1 column=0 cspan=3 flow='brew'>
           <div class='input-image kettle'>
           </div>
           <span class='input-text'>
-            Brew: 4 Cups
+            {{Language.brew}}
           </span>
         </a>
       </div>
 
       <div id='te' class='flowgrid-content' width=2 height=3 cWidth=30 cHeight=30>
-        <span class='flowgrid-cell info-text' row=0 column=0 cspan=2>Open the valve once the light is green and push Tea,</span>
+        <span class='flowgrid-cell info-text' row=0 column=0 cspan=2>{{Language.info.teaStart}}</span>
 
         <a class='all-off flowgrid-cell flowgrid-input' row=1 column=0 flow='main'>
           <div class='input-image arrow'>
           </div>
           <span class='input-text'>
-            Back
+            {{Language.back}}
           </span>
         </a>
 
@@ -57,21 +57,21 @@
           <div class='input-image tea'>
           </div>
           <span class='input-text'>
-            Tea
+            {{Language.tea}}
           </span>
         </a>
 
-        <span class='flowgrid-cell info-text' row=2 column=0 cspan=2>or push Back if you want to stop.</span>
+        <span class='flowgrid-cell info-text' row=2 column=0 cspan=2>{{Language.info.teaEnd}}</span>
       </div>
 
       <div id='espresso' class='flowgrid-content' width=2 height=3 cWidth=30 cHeight=30>
-        <span class='flowgrid-cell info-text' row=0 column=0 cspan=2>Push espresso once the light is green,</span>
+        <span class='flowgrid-cell info-text' row=0 column=0 cspan=2>{{Language.info.espressoStart}}</span>
 
         <a class='all-off flowgrid-cell flowgrid-input' row=1 column=0 flow='main'>
           <div class='input-image arrow'>
           </div>
           <span class='input-text'>
-            Back
+            {{Language.back}}
           </span>
         </a>
 
@@ -79,50 +79,50 @@
           <div class='input-image espresso'>
           </div>
           <span class='input-text'>
-            Espresso
+            {{Language.espresso}}
           </span>
         </a>
 
-        <span class='flowgrid-cell info-text' row=2 column=0 cspan=2>or Back if you want to stop.</span>
+        <span class='flowgrid-cell info-text' row=2 column=0 cspan=2>{{Language.info.espressoStart}}</span>
       </div>
 
       <div id='milk' class='flowgrid-content' width=2 height=3 cWidth=30 cHeight=30>
-        <span class='flowgrid-cell info-text' row=0 column=0 cspan=2>Open the valve once the light is green,</span>
+        <span class='flowgrid-cell info-text' row=0 column=0 cspan=2>{{Language.info.milkStart}}</span>
 
         <a class='all-off flowgrid-cell flowgrid-input' row=1 column=0 flow='main'>
           <div class='input-image arrow'>
           </div>
           <span class='input-text'>
-            Back
+            {{Language.back}}
           </span>
         </a>
 
-        <span class='flowgrid-cell info-text' row=2 column=0 cspan=2>and push Back once you are done.</span>
+        <span class='flowgrid-cell info-text' row=2 column=0 cspan=2>{{Language.info.milkENd}}</span>
       </div>
 
       <div id='brew' class='flowgrid-content' width=3 height=3 cWidth=30 cHeight=30>
-        <span class='flowgrid-cell info-text' row=0 column=0 cspan=3 rspan=2>Don't hesitate to get yourself some chocolate with this wonderful coffee, enjoy!</span>
+        <span class='flowgrid-cell info-text' row=0 column=0 cspan=3 rspan=2>{{Language.info.brew}}</span>
 
         <a class='all-off flowgrid-cell flowgrid-input' row=2 column=0 flow='main'>
           <div class='input-image arrow'>
           </div>
           <span class='input-text'>
-            Stop
+            {{Language.stop}}
           </span>
         </a>
 
-        <span class='flowgrid-cell info-text' row=2 column=1 cspan=2>Time until done:</span>
+        <span class='flowgrid-cell info-text' row=2 column=1 cspan=2>{{Language.info.brewTimer}}</span>
         <span class='timer flowgrid-cell info-text' row=2 column=2></span>
       </div>
 
       <div id='stop' class='flowgrid-content' width=2 height=3 cWidth=40 cHeight=25>
-        <span class='flowgrid-cell super-info-text' row=0 column=0 cspan=2>Hit stop once you are done, remember to close the valve.</span>
+        <span class='flowgrid-cell super-info-text' row=0 column=0 cspan=2>{{Language.info.stop}}</span>
 
         <a class='all-off flowgrid-cell flowgrid-input' row=1 column=0 cspan=2 rspan=2 flow='main'>
           <div class='input-image arrow'>
           </div>
           <span class='input-text'>
-            Stop
+            {{Language.stop}}
           </span>
         </a>
       </div>
